@@ -164,6 +164,22 @@ export function Range() {
   );
 }
 
+export function Presets() {
+  return (
+    <div style={{ padding: 40 }}>
+      <DatePickerInput
+        type="range"
+        label="Date picker input"
+        presets={[
+          { label: 'This week', value: [dayjs().startOf('week').toDate(), dayjs().toDate()] },
+          { label: 'This month', value: [dayjs().startOf('month').toDate(), dayjs().toDate()] },
+          { label: 'This year', value: [dayjs().startOf('year').toDate(), dayjs().toDate()] },
+        ]}
+      />
+    </div>
+  );
+}
+
 export function Multiple() {
   return (
     <div style={{ padding: 40 }}>
